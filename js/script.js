@@ -85,31 +85,30 @@ jQuery(".js-modal-close").on("click", function (e) {
 });
 
 //spots-slider
+const isSP = window.innerWidth < 900; // 900px 未満を SP とする
+
 const swiper2 = new Swiper("#js-slider-swiper", {
+  loop: isSP, // ← SP のときだけ true
+
   navigation: {
     nextEl: "#js-slider-next",
     prevEl: "#js-slider-prev",
   },
+
   breakpoints: {
     0: {
-      slidesPerView: 1.6,
+      slidesPerView: 1.4,
       centeredSlides: true,
-      slidesOffsetBefore: 10,
-      slidesOffsetAfter: 10,
       spaceBetween: 16,
     },
     900: {
-      slidesPerView: 2.5,
+      slidesPerView: 2.2,
       centeredSlides: false,
-      slidesOffsetBefore: 30,
-      slidesOffsetAfter: 30,
       spaceBetween: 32,
     },
     1512: {
       slidesPerView: 3.28,
       centeredSlides: false,
-      slidesOffsetBefore: 30,
-      slidesOffsetAfter: 30,
       spaceBetween: 32,
     },
   },
@@ -232,3 +231,4 @@ jQuery(function () {
     return false;
   });
 });
+
