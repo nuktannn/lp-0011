@@ -1600,7 +1600,8 @@ prizes
   position: absolute;
   z-index: -1;
   top: -10%;
-  left: 39%;
+  left: 50%;
+  transform: translateX(-50%);
   width: 320px;
   height: 200px;
   background: #fff;
@@ -1626,9 +1627,10 @@ prizes
   content: "";
   position: absolute;
   top: -4%;
-  left: 15%;
+  left: 50%;
   width: 1010px;
   height: 100px;
+  transform: translateX(-50%);
   background: url(../img/prizes__bg.png) no-repeat center center/contain;
 }
 @media screen and (min-width:900px) and (max-width: 1511px) {
@@ -2191,10 +2193,6 @@ dialog::backdrop {
 /*================================
 spots
 ===============================*/
-.slider-card {
-  overscroll-behavior-y: contain;
-}
-
 .slider {
   background: #67B0C7;
   position: relative;
@@ -2206,7 +2204,7 @@ spots
   content: "";
   position: absolute;
   top: 0;
-  left: 16%;
+  left: 10%;
   width: 56px;
   height: 464px;
   z-index: 2;
@@ -2214,7 +2212,8 @@ spots
 }
 @media screen and (min-width:900px) and (max-width: 1511px) {
   .slider::before {
-    left: 4%;
+    left: 3%;
+    width: 45px;
   }
 }
 @media screen and (max-width: 899px) {
